@@ -9,12 +9,14 @@ public class UserRegistration {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your Last name :");
-        String firstName=scanner.next();
-        Matcher matcher =  pattern.matcher(firstName);
-        if(matcher.matches())
-            System.out.println("Valid");
-        else
-            System.out.println("InValid");
+        System.out.print("Enter First Name: ");
+        String firstName = scanner.next();
+        System.out.println(Pattern.matches("[A-Z][a-z]{2,}", firstName));
+        System.out.print("Enter Last Name: ");
+        String lastName = scanner.next();
+        System.out.println(Pattern.matches("[A-Z][a-z]{2,}", lastName));
+        System.out.print("Enter E-mail: ");
+        String email = scanner.nextLine();
+        System.out.println(Pattern.matches("[a-z][A-Z a-z 0-9]+[@][a-z]+[.][a-z]{2,5}", email));
     }
 }
