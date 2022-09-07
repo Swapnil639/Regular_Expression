@@ -9,7 +9,7 @@ public class UserRegistration {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your First name :");
+        System.out.print("Enter your Last name :");
         String firstName=scanner.next();
         Matcher matcher =  pattern.matcher(firstName);
         if(matcher.matches())
